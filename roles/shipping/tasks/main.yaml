@@ -27,9 +27,9 @@
   community.mysql.mysql_db:
     state: import
     name: all
-    login_user: root
-    login_password: RoboShop@1
-    login_host: "mysql.daws90.shop"
+    login_user: "{{ MYSQL_LOGIN_USER }}"
+    login_password: "{{ MYSQL_LOGIN_PASSWORD }}"
+    login_host: "{{ MYSQL_HOST }}"
     target: "{{ item }}"
   loop:
   - /app/db/schema.sql
