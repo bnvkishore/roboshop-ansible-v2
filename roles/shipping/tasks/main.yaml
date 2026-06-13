@@ -19,7 +19,11 @@
     state: present
   loop:
   - mysql
-  - PyMySQL
+
+- name: install PyMySQL
+  pip:
+    name:  PyMySQL
+    executable: pip3.9
 
 - name: load mysql data
   ansible.mysql.mysql_db:
