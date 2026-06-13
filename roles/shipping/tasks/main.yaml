@@ -13,12 +13,10 @@
     name: common
     tasks_from: systemd-setup
 
-- name: install mysql and PyMySQL
+- name: install mysql
   package:
-    name: "{{ item }}"
+    name: mysql
     state: present
-  loop:
-  - mysql
 
 - name: install PyMySQL
   pip:
