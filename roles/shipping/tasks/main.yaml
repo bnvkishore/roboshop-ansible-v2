@@ -27,7 +27,7 @@
   ansible.mysql.mysql_db:
     state: import
     name: all
-    login_user: "{{ MYSQL_LOGIN_USER}}"
+    login_user: "{{ MYSQL_LOGIN_USER }}"
     login_password: "{{ MYSQL_LOGIN_PASSWORD }}"
     login_host: "{{ MYSQL_HOST }}"
     target: "{{ item }}"
