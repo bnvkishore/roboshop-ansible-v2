@@ -5,11 +5,11 @@
 - name: nodejs setup
   import_role:
     name: common
-    tasks_from: nodejs
+    tasks_from: nodejs.yaml
 - name: systemd setup
   import_role:
     name: common
-    tasks: systemd-setup
+    tasks: systemd-setup.yaml
 - name: copy mongodb repo
   copy:
     src: mongo.repo
