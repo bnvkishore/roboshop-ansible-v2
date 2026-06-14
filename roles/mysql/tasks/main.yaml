@@ -1,6 +1,6 @@
 - name: print root password
   debug:
-    msg: {{ root_password.MYSQL_ROOT_PASSWORD }}
+    msg: "{{ root_password.MYSQL_ROOT_PASSWORD }}"
 - name: install mysql server
   package:
     name: mysql-server
